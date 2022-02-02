@@ -1,4 +1,7 @@
 'use strict';
+
+const { number } = require("yargs");
+
 // Important Note: 
 // Kindly use filter instead of for in all of your solutions
 
@@ -15,7 +18,8 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-    // write your code here
+    let odd = arr.filter(num => num % 2 != 0);
+    return odd;
 }
 
 // 2) ---------------------
@@ -66,7 +70,12 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
-    // write your code here
+    let arr1 = [];
+    let arr2 = [];
+    arr1 = arr.filter(element => element.LastName != null && element.yearsOfExperience > 4 && element.tech == 'JS');
+    for (const key of arr1)
+        arr2.push({ fullName: `${key.firstName} ${key.LastName}`, tech: `${key.tech}` })
+    return arr2;
 }
 
 // 3) ---------------------
@@ -79,7 +88,11 @@ const cvsFiltration = (arr) => {
 // ------------------------
 
 const vowelsFiltration = (arr) => {
-    // write your code here
+    let newArr = arr.filter(word => {
+        if (word.includes('a') == false && word.includes('e') == false && word.includes('i') == false && word.includes('o') == false && word.includes('u') == false)
+            return word;
+    });
+    return newArr;
 }
 
 // 4) ---------------------
@@ -97,7 +110,17 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
+    let arr3 = [];
+    arr1.forEach(element => {
+        if (arr2.includes(element) == false)
+            arr3.push(element)
+    });
+    arr2.forEach(element => {
+        if (arr1.includes(element) == false)
+            arr3.push(element)
+    });
+
+    return arr3;
 }
 
 
