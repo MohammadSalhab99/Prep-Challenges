@@ -16,7 +16,9 @@
 // -------------
 
 function square(arr) {
-    // write your code here
+    let map0 = arr.map(element => element * element);
+    return map0;
+
 }
 
 // 2) ------------------
@@ -55,7 +57,10 @@ function square(arr) {
 //
 
 function fullName(arr) {
-    // write your code here
+    let arr1 = []
+    arr1 = arr.map(element => element = `${element.firstName} ${element.lastName}`);
+    return arr1;
+
 }
 
 // 3) ---------------------
@@ -117,7 +122,27 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
-    // write your code here
+
+    let sum = 0;
+    let arr1 = [];
+    arr1 = arr.map(element => {
+            for (let i = 0; i < element.gradsList.length; i++) {
+                sum += element.gradsList[i];
+            }
+            const info = {}
+            for (let property in element) {
+                info[`${property}`] = `${element[property]}`
+
+            }
+            info.avg = sum / element.gradsList.length;
+            return info;
+
+        }
+
+
+
+    );
+    return arr1;
 }
 
 
