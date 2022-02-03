@@ -18,6 +18,7 @@
 function square(arr) {
     let map0 = arr.map(element => element * element);
     return map0;
+
 }
 
 // 2) ------------------
@@ -121,6 +122,7 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
+
     let arr1 = [];
     arr1 = arr.map(element => {
         const info = {}
