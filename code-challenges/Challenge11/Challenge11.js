@@ -123,7 +123,6 @@ function fullName(arr) {
 
 function gradesAvg(arr) {
 
-
     let arr1 = [];
     arr1 = arr.map(element => {
         const info = {}
@@ -134,8 +133,9 @@ function gradesAvg(arr) {
         return info;
     });
     return arr1;
-}
 
+
+}
 
 // 4) ---------------------
 //
