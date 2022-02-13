@@ -20,7 +20,9 @@
 // ------------------------
 
 const LastWord = (str) => {
-    // write your code here
+    var index = str.lastIndexOf(" ");
+    var lastWord = str.slice(index + 1);
+    return lastWord;
 }
 
 // 2) ---------------------
@@ -32,7 +34,8 @@ const LastWord = (str) => {
 // ------------------------
 
 const LastWord_2 = (str) => {
-    // write your code here
+    var arr = str.split(" ");
+    return arr[arr.length - 1];
 }
 
 // 3) ---------------------
@@ -48,7 +51,15 @@ const LastWord_2 = (str) => {
 // ------------------------
 
 const replaceWords = (str) => {
-    // write your code here
+    var arr = str.split(" ");
+    arr.splice(0, 1, "We");
+    if (arr[1].includes("am")) {
+        arr.splice(1, 1, "are");
+    }
+    if (arr[1].includes("was")) {
+        arr.splice(1, 1, "were");
+    }
+    return arr.join(" ");
 }
 
 // 4) ---------------------
@@ -59,7 +70,9 @@ const replaceWords = (str) => {
 // ------------------------
 
 const arrToStr = (arr) => {
-    // write your code here
+    arr[4] = arr[4] + ',';
+    var str = arr.join(" ");
+    return str;
 }
 
 // 5) ---------------------
@@ -75,7 +88,10 @@ const arrToStr = (arr) => {
 // ------------------------
 
 const letterCounter = (str) => {
-    // write your code here
+    let arr = str.split(" ");
+
+
+
 }
 
 
